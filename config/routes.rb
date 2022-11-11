@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :appointments
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
+      resources :appointments
       resources :doctors, only: [:index, :show, :new, :create]
     end
   end
