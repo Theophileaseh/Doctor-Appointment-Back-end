@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: rails
+  password: rails
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: Doctor_Appointment_Back_end_development
+
+test:
+  <<: *default
+  database: Doctor_Appointment_Back_end_test
+
+production:
+  <<: *default
+  database: Doctor_Appointment_Back_end_production
+  username: rails
+  password: <%= ENV["DOCTOR_APPOINTMENT_BACK_END_DATABASE_PASSWORD"] %>
