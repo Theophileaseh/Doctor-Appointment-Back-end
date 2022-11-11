@@ -15,6 +15,8 @@ gem 'devise'
 
 gem 'rswag'
 
+gem 'cancancan'
+
 # Use Json Web Token (JWT) for token based authentication
 gem 'jwt'
 
