@@ -8,20 +8,30 @@ class Api::V1::DoctorsController < Api::V1::BaseController
     render json: @doctor
   end
 
-  def new
-    Doctor.new
-  end
-
   def create
     @doctor = Doctor.new(doctor_params)
     if @doctor.save
-      redirect_to @doctor,
-                  notice: 'A new Doctor was added successfully.'
-
+      render json: @doctor, status: :created
     else
-      render :new, alert: 'Failed to add a new Doctor'
+      render json: @doctor.errors, status: :unproccessable_entity
     end
   end
+
+  def update
+    @doctor = Doctor.find(params[:id])
+    if @doctor.update(doctor_params)
+      render json: @doctor
+    else
+      render json: @doctor.errors, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @doctor = Doctor.find(params[:id])
+    @doctor.destroy
+  end
+
+  private
 
   def doctor_params
     params
