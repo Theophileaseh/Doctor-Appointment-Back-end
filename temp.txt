@@ -1,5 +1,9 @@
+Models:
 bin/rails generate model User name:string birth_date:date gender:string 
+bin/rails generate model Doctor name:string photo:string specialty:string bio:string 
 
+
+Insert:
 User.create!(name: 'name', birth_date: '01-04-1999', gender: 'f', email: 'email@mail.com', password: 'gdh343')
 
 User.create(name: 'name', birth_date: '01-04-1999', gender: 'f')
