@@ -10,12 +10,11 @@ class ApplicationController < ActionController::API
     header = request.headers['Authorization']
     header = header.split.last if header
     begin
-      # rubocop:disable Lint/DuplicateBranch
       @decoded = JsonWebToken.decode(header)
       @current_user = User.find(@decoded[:user_id])
     rescue ActiveRecord::RecordNotFound => e
       render json: { errors: e.message }, status: :unauthorized
-    rescue JWT::DecodeError => e
+    rescue JWT::DecodeError => e # rubocop:disable Lint/DuplicateBranch
       render json: { errors: e.message }, status: :unauthorized
     end
   end
