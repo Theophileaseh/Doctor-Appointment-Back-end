@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
   devise_for :users
   resources :appointments
 
@@ -10,9 +12,9 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
-      resources :users
-      resources :appointments
-      resources :doctors
+      resources :users, only: %i[index show create destroy]
+      resources :appointments, only: %i[index create destroy]
+      resources :doctors, only: %i[index show create destroy]
     end
   end
 end
