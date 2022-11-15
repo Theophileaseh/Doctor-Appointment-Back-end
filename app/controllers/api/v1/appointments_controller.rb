@@ -1,5 +1,4 @@
 class AppointmentsController < ApplicationController
-  
   before_action :authorize_request, only: %i[create update destroy]
   before_action :set_appointment, only: %i[show update destroy]
 

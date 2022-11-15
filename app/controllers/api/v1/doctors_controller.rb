@@ -1,7 +1,6 @@
 class Api::V1::DoctorsController < ApplicationController
   before_action :authorize_request, only: %i[show create update destroy]
 
-
   def index
     render json: Doctor.all
   end
