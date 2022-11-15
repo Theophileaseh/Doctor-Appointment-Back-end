@@ -52,6 +52,6 @@ class Api::V1::DoctorsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def doctor_params
-    params.require(:doctor).permit(:name, :specialization, :picture, :gender)
+    params.require(:doctor).permit(:user_id, :name, :specialization, :picture, :gender)
   end
 end
