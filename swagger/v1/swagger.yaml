@@ -7,6 +7,12 @@ paths:
   "/api/v1/appointments":
     get:
       summary: list appointments
+      parameters:
+      - in: header
+        type: string
+        name: Authorization
+        required: true
+        description: Client token
       security:
       - Authorization: {}
       responses:
@@ -55,6 +61,12 @@ paths:
       required: true
     get:
       summary: show appointment
+      parameters:
+      - in: header
+        type: string
+        name: Authorization
+        required: true
+        description: Client token
       security:
       - Authorization: {}
       responses:
