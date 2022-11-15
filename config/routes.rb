@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: %i[index show create destroy]
       resources :appointments, only: %i[index create destroy]
-      resources :doctors, only: %i[index show create]
+      resources :doctors, only: %i[index show create destroy]
     end
   end
 end
