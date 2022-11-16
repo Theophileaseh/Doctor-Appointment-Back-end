@@ -1,12 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   before(:all) do
     @user = User.create(
       email: 'test@mail.com',
       password: 'hgdu47sk',
-      name: 'Superman', 
+      name: 'Superman',
       birth_date: '04-05-2000',
       gender: 'f'
     )
@@ -21,7 +20,6 @@ RSpec.describe User, type: :model do
       expect(@user.gender).to_not eq('m')
     end
   end
-
 
   describe('associations') do
     it { should have_many(:appointments) }
