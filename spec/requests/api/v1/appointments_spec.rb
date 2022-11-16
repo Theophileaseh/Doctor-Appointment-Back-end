@@ -11,7 +11,6 @@ RSpec.describe 'api/v1/appointments', type: :request do
             }
           }
         end
-        run_test!
       end
     end
 
@@ -32,11 +31,11 @@ RSpec.describe 'api/v1/appointments', type: :request do
           properties: {
             day_of_appointment: { type: :string },
             time_of_appointment: { type: :string },
-            description: { type: :string },
+            message: { type: :string },
             user_id: { type: :integer },
             doctor_id: { type: :integer }
           },
-          required: %w[day_of_appointment time_of_appointment description user_id doctor_id]
+          required: %w[day_of_appointment time_of_appointment message user_id doctor_id]
         }
 
       response(200, 'successful') do
@@ -47,7 +46,6 @@ RSpec.describe 'api/v1/appointments', type: :request do
             }
           }
         end
-        run_test!
       end
     end
   end
@@ -74,8 +72,8 @@ RSpec.describe 'api/v1/appointments', type: :request do
             }
           }
         end
-        run_test!
       end
     end
   end
+end
 end

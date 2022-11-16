@@ -33,8 +33,8 @@ RSpec.describe 'api/v1/users', type: :request do
           required: %w[name email birth_date gender password password_confirmation role]
         }
         let(:user) do
-          User.create(name: 'Nwachan', email: "nwachan@gmail.com", birth_date: { type: :string },
-            gender: { type: :string }, password: '123456',
+          User.create(name: 'Nwachan', email: 'nwachan@gmail.com', birth_date: { type: :string },
+                      gender: { type: :string }, password: '123456',
                       password_confirmation: '123456', role: 'admin')
         end
 
@@ -57,13 +57,13 @@ RSpec.describe 'api/v1/users', type: :request do
     get('show user') do
       response(200, 'successful') do
         let(:user) do
-          User.create(name: 'Nwachan', email: "nwachan@gmail.com", birth_date: { type: :string },
-            gender: { type: :string }, password: '123456',
+          User.create(name: 'Nwachan', email: 'nwachan@gmail.com', birth_date: { type: :string },
+                      gender: { type: :string }, password: '123456',
                       password_confirmation: '123456', role: 'admin')
         end
         let(:id) do
-          User.create(name: 'Nwachan', email: "nwachan@gmail.com", birth_date: { type: :string },
-            gender: { type: :string }, password: '123456',
+          User.create(name: 'Nwachan', email: 'nwachan@gmail.com', birth_date: { type: :string },
+                      gender: { type: :string }, password: '123456',
                       password_confirmation: '123456', role: 'admin').id
         end
 
@@ -81,8 +81,8 @@ RSpec.describe 'api/v1/users', type: :request do
     patch('update user') do
       response(200, 'successful') do
         let(:user) do
-          User.create(name: 'Nwachan', email: "nwachan@gmail.com", birth_date: { type: :string },
-          gender: { type: :string }, password: '123456',
+          User.create(name: 'Nwachan', email: 'nwachan@gmail.com', birth_date: { type: :string },
+                      gender: { type: :string }, password: '123456',
                       password_confirmation: '123456', role: 'admin')
         end
         let(:id) { User.all.last.id }
@@ -115,11 +115,11 @@ RSpec.describe 'api/v1/users', type: :request do
     put('update user') do
       response(200, 'successful') do
         let(:user) do
-          User.create(name: 'Nwachan', email: "nwachan@gmail.com", birth_date: "01/01/2005", gender: "M", password: '123456',
+          User.create(name: 'Nwachan', email: 'nwachan@gmail.com', birth_date: '01/01/2005', gender: 'M', password: '123456',
                       password_confirmation: '123456', role: 'admin')
         end
         let(:id) do
-          User.create(name: 'Nwachan', email: "nwachan@gmail.com", birth_date: "01/01/2005", gender: "M", password: '123456',
+          User.create(name: 'Nwachan', email: 'nwachan@gmail.com', birth_date: '01/01/2005', gender: 'M', password: '123456',
                       password_confirmation: '123456', role: 'admin').id
         end
         consumes 'application/json'
@@ -185,7 +185,6 @@ RSpec.describe 'api/v1/users', type: :request do
           }
         end
       end
-    end
     end
   end
 end
