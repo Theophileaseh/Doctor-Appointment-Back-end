@@ -4,9 +4,11 @@ class Api::V1::AppointmentsController < ApplicationController
 
   # GET /appointments
   def index
+    user = authorize_request.id
     @appointments = Appointment.select('appointments.id, appointments.day_of_appointment,
     appointments.time_of_appointment, appointments.message, appointments.user_id,
-    appointments.doctor_id, doctors.name as doctor_name').joins(:user).joins(:doctor)
+    appointments.doctor_id, doctors.name as doctor_name').joins(:user).joins(:doctor).where(user_id: user)
+
     render json: @appointments
   end
 
