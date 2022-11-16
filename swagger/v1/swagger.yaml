@@ -31,18 +31,18 @@ paths:
         schema:
           type: object
           properties:
-            date_of_appointment:
+            day_of_appointment:
               type: string
             time_of_appointment:
               type: string
             message:
               type: string
             user_id:
-              type: string
+              type: integer
             doctor_id:
-              type: string
+              type: integer
           required:
-          - date_of_appointment
+          - day_of_appointment
           - time_of_appointment
           - message
           - user_id

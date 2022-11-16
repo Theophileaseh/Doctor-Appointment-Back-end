@@ -1,6 +1,6 @@
 class Api::V1::DoctorsController < ApplicationController
   before_action :authorize_request, only: %i[create update destroy]
-  before_action :set_doctor, only: %i[show update destroy]
+  # before_action :set_doctor, only: %i[show update destroy create]
 
   # GET /doctors
   def index
@@ -52,6 +52,6 @@ class Api::V1::DoctorsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def doctor_params
-    params.require(:doctor).permit(:user_id, :name, :specialization, :picture, :gender)
+    params.require(:doctor).permit(:user_id, :name, :specialty, :photo, :bio)
   end
 end

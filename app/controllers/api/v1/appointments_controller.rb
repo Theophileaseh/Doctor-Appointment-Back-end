@@ -4,8 +4,9 @@ class Api::V1::AppointmentsController < ApplicationController
 
   # GET /appointments
   def index
-    @appointments = Appointment.where(current_user.id = user_id)
-
+    @appointments = Appointment.select('appointments.id, appointments.day_of_appointment,
+    appointments.time_of_appointment, appointments.message, appointments.user_id,
+    appointments.doctor_id, doctors.name as doctor_name').joins(:user).joins(:doctor)
     render json: @appointments
   end
 
@@ -19,7 +20,7 @@ class Api::V1::AppointmentsController < ApplicationController
     @appointment = Appointment.new(appointment_params)
 
     if @appointment.save
-      render json: @appointment, status: :created, location: @appointment
+      render json: @appointment, status: :created
     else
       render json: @appointment.errors, status: :unprocessable_entity
     end
@@ -44,6 +45,11 @@ class Api::V1::AppointmentsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_appointment
     @appointment = Appointment.find(params[:id])
+  end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    @user = User.find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
