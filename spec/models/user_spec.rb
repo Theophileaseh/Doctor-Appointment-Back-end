@@ -58,7 +58,7 @@ RSpec.describe User, type: :model do
       expect(User.create(
                email: 'my email',
                password: 'hgdu47sk',
-               name: 'S',
+               name: 'Superman',
                birth_date: '2000-05-04',
                gender: 'f'
              )).to_not be_valid
