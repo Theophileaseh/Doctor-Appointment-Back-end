@@ -24,7 +24,7 @@ RSpec.describe 'api/v1/appointments', type: :request do
                   description: 'Client token'
                 })
       response(200, 'successful') do
-        security [Authorization: {}]
+        security [Authorization: []]
         let(:Authorization) { "Authorization #{generate_token}" }
 
         parameter name: :appointment, in: :body, schema: {
