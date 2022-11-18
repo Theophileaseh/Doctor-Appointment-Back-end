@@ -49,8 +49,8 @@ RSpec.describe Appointment, type: :model do
   it 'Should be invalid' do
     appointment = Appointment.create(user_id: 1, message: 'Hi Test', day_of_appointment: '2022-01-04',
                                      time_of_appointment: '12:00:00')
-    appointment_2 = Appointment.create
-    appointment_3 = Appointment.create(user_id: -3, doctor_id: -1, message: 'Hi Test again',
+    appointment_2 = Appointment.create # rubocop:disable Naming/VariableNumber
+    appointment_3 = Appointment.create(user_id: -3, doctor_id: -1, message: 'Hi Test again', # rubocop:disable Naming/VariableNumber
                                        day_of_appointment: '2022-01-04', time_of_appointment: '12:00:00')
 
     expect(appointment).to_not be_valid
