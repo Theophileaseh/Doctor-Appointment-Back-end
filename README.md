@@ -226,7 +226,7 @@ To see all server logs
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+> We are lokking into improving the project and have planed several feature to implement in the future:
 
 - [ ] **[User profile editing]**
 - [ ] **[Doctor Role]**
@@ -267,14 +267,14 @@ I would like to thank...
 
 ## ❓ FAQ <a name="faq"></a>
 
-- **[What is the best platform to Deploy the app built on top of API?]**
+- **What is the best platform to Deploy the app built on top of API?**
 
   - You can use any of the platforms that subbort your preferred tech. For instance, you can easily deploy your React app on Neflify
 
-- **[How to get started with the project?]**
+- **How to get started with the project?**
 
-  - If you are building a fronted app and aim to use our basic API you can quickly start with fetching data from the endpointes provided. Read [API_DOC]('http://localhost:3000/api-docs') to lean more. 
-  - If you aim to modify and extend our API you will need to clone repo and follow all setup steps described above
+  - If you are building a fronted app and aim to use our basic API you can quickly start with fetching data from the endpointes provided. Read [API_DOC](http://localhost:3000/api-docs) to lean more. 
+  - If you aim to modify and extend our API you will need to clone repo and follow all setup (<a href="#getting-started">steps described above</a>)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
