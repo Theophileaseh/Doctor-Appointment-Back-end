@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :doctors
   before_validation :default_values
 
-  validates :name, presence: true
+  validates :name, presence: true, length: { minimum: 3 }
   validates :birth_date, presence: true
   validates :gender, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }

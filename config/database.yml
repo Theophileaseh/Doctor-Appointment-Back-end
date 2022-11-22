@@ -86,5 +86,5 @@ test:
 production:
   <<: *default
   database: Doctor_Appointment_Back_end_production
-  username: Doctor_Appointment_Back_end
+  username: postgres
   password: <%= ENV["DOCTOR_APPOINTMENT_BACK_END_DATABASE_PASSWORD"] %>

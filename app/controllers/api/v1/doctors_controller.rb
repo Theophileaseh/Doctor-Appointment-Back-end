@@ -18,10 +18,10 @@ class Api::V1::DoctorsController < ApplicationController
   def create
     @doctor = Doctor.new(doctor_params)
 
-    if current_user.role == 'admin'
+    if authorize_request.role == 'admin'
       @doctor.save
       render json: @doctor, status: :created
-    elsif current_user.role != 'admin'
+    elsif authorize_request.role != 'admin'
       render json: { message: 'You are not an admin user' }
     else
       render json: @doctor.errors, status: :unprocessable_entity
