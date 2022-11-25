@@ -63,13 +63,10 @@ After you're finished please remove all the comments and instructions!
 ## 🛠 Built With <a name="built-with"></a>
 
 - ROR
-- React
 - Rspec
 - Git
 - Github
 - Rubocop
-- RSpec
-- Stylelint
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -114,7 +111,7 @@ After you're finished please remove all the comments and instructions!
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://doctor-appointments-backend.herokuapp.com/api-docs)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
