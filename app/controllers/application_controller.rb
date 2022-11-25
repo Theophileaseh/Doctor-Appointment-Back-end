@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::API
   before_action :set_default_format
-  before_action :configure_permitted_parameters, if: :devise_controller?
 
   def not_found
     render json: { error: 'not_found' }
@@ -23,7 +22,4 @@ class ApplicationController < ActionController::API
     request.format = :json
   end
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name email password password_confirmation])
-  end
 end
