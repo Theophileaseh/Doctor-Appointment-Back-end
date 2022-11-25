@@ -40,16 +40,6 @@ class Api::V1::UsersController < ApplicationController
     render json: @users
   end
 
-  # GET /users/1/appointments
-  def appointments
-    @appointments = Appointment.select('appointments.*,
-      doctors.name As doctor_name,
-      doctors.specialization As doctors_specialization').joins(
-        :doctor, :user
-      ).where(user_id: current_user.id)
-    render json: { user: current_user, appointments: @appointments }
-  end
-
   private
 
   # Use callbacks to share common setup or constraints between actions.
