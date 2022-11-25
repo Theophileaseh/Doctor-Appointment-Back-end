@@ -54,11 +54,10 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Doctor Appointment Back-end <a name="about-project"></a>
 
-> The `Doctor-Appointment Project` project is a appointment booking project split to API and Frontend app.
+> The `Doctor-Appointment Backend` is an API application built on Ruby on Rails that serves as an enpoint to a Doctors' Appointment user interface.
 
-**[DOCTOR-APPOINTMENT PROJECT ]** is designed to allow users to book Dcoctor Appoinment. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs. A user friendly frontend app enables uesrs to easily manage their appointments and choose a Doctor from the list.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -99,9 +98,9 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[Authentication]** Users are required to sign up to app to get access to all features of the application 
-- **[Authorization]** Users are authourized accordingly to roles assigned with a help of CANCANCAN 
-- **[Documented]** API is documented and esures easy integration with a custom frontend app built with tech you prefer to use
+- ``Authentication:`` Users are required to sign up to app to get access to all features of the application 
+- ``Authorization:`` Users are authourized accordingly to roles assigned with a help of CANCANCAN 
+- ``Documentation:`` API documentation is created for easy understanding on how the application works.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,7 +110,7 @@ After you're finished please remove all the comments and instructions!
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://doctor-appointments-backend.herokuapp.com/api-docs)
+- [See Live Demo](https://doctor-appointments-backend.herokuapp.com/api-docs)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -225,8 +224,7 @@ To see all server logs
 
 > We are lokking into improving the project and have planed several feature to implement in the future:
 
-- [ ] **[User profile editing]**
-- [ ] **[Doctor Role]**
+- [ ] User profile editing
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -279,8 +277,6 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
