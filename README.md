@@ -58,6 +58,11 @@ After you're finished please remove all the comments and instructions!
 
 > The `Doctor-Appointment Backend` is an API application built on Ruby on Rails that serves as an enpoint to a Doctors' Appointment user interface.
 
+## 🛠 Kanban board <a name="kanban-board"></a>
+[Link to kanban board](https://github.com/users/Theophileaseh/projects/1)
+
+**Initial state of kanban board**
+![Initial state of kanban board](https://user-images.githubusercontent.com/44860643/201080111-8b392330-8be6-43bc-a2f3-49803ca4dca7.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
