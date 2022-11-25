@@ -14,6 +14,6 @@ class User < ApplicationRecord
   validates :password, presence: true
 
   def default_values
-    self.role = 'normal' if role.nil?
+    self.role = 'normal' if role.nil? || role.!admin? || role.!normal
   end
 end
